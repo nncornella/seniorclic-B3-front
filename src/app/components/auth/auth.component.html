@@ -1,0 +1,29 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()"
+    class="bg-surface-0 dark:bg-surface-900 p-6 shadow rounded-border w-full lg:w-6/12 mx-auto"
+>
+    
+    <div>
+        <input
+          type="text"
+          formControlName="username"
+          id="username"
+          placeholder="Usuario"
+        />
+  
+        <br/>
+
+        <input
+          type="password"
+          formControlName="password"
+          id="pass"
+          placeholder="Contraseña"
+        />
+  
+        <br/>
+        <br/>    
+
+        <button type="submit" [disabled]="loginForm.invalid">Iniciar Sesión</button> 
+        
+      </div>
+    
+</form>

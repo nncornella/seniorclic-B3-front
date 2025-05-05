@@ -1,0 +1,103 @@
+<div>
+
+    <form [formGroup]="registerForm" (ngSubmit)="register()"
+        class="bg-surface-0 dark:bg-surface-900 p-6 shadow rounded-border w-full lg:w-6/12 mx-auto"
+    >
+    <input
+        type="text"
+        formControlName="username"
+        id="usermame"
+        placeholder="Usuario"
+    />
+
+    <br/>
+
+    <input
+        type="password"
+        formControlName="password"
+        id="pass"
+        placeholder="Contraseña"
+    />
+
+    <br/>
+
+    <input
+        type="email"
+        formControlName="email"
+        id="email"
+        placeholder="Correo"
+    />
+
+    <br/>
+    <br/>
+
+   <button type="submit" [disabled]="registerForm.invalid">Registrarse</button> 
+   
+    </form>
+
+
+<!-- <div class="flex justify-center items-center h-screen w-full">
+  
+    <div class="bg-surface-50 dark:bg-surface-950 px-6 md:px-12 lg:px-20 w-full lg:w-3/4">
+      <form
+        [formGroup]="registerForm"
+        (ngSubmit)="register()"
+        class="bg-surface-0 dark:bg-surface-900 p-6 shadow rounded-border w-full lg:w-6/12 mx-auto"
+      >
+        <div class="text-center mb-8">
+          <div
+            class="text-surface-900 dark:text-surface-0 text-3xl font-medium mb-4"
+          >
+            Crear una cuenta
+          </div>
+          <span
+            class="text-surface-600 dark:text-surface-200 font-medium leading-normal"
+            >¿Ya tienes una cuenta?</span
+          >
+          <a
+            class="font-medium no-underline ml-2 text-primary cursor-pointer"
+            routerLink="/"
+            >Inicia sesión</a
+          >
+        </div>
+    
+        <div>
+          <label
+            for="userName"
+            class="text-surface-900 dark:text-surface-0 font-medium mb-2 block"
+            >Email</label
+          >
+          <input
+            pInputText
+            type="text"
+            formControlName="userName"
+            id="userName"
+            class="w-full mb-4"
+            placeholder="Usuario"
+          />
+    
+          <label
+            for="pass"
+            class="text-surface-900 dark:text-surface-0 font-medium mb-2 block"
+            >Password</label
+          >
+          <input
+            pInputText
+            type="password"
+            formControlName="password"
+            placeholder="Contraseña"
+            id="pass"
+            class="w-full mb-4"
+          />
+    
+           <p-button
+            label="Registrarse"
+            type="submit"
+            styleClass="w-full"
+            [disabled]="registerForm.invalid"
+          /> 
+        </div>
+      </form>
+    </div> -->
+  
+  </div>
